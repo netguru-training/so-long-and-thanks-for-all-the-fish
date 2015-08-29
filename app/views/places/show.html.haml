@@ -2,4 +2,5 @@
   = render place
   %h3= t('reviews.headers.add_new')
   %h3= t('reviews.headers.list')
+  = render partial: 'reviews/review', collection: place.reviews
 

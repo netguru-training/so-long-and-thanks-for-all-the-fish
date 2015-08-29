@@ -4,6 +4,6 @@ class Event < ActiveRecord::Base
 
   # Relationships
   belongs_to :place
-  has_many :participations
+  has_many :users, through: :participations
   has_many :messages
 end

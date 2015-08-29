@@ -35,5 +35,7 @@ en:
     headers:
       add_new: 'Add new review:'
       list: 'Reviews:'
+    review:
+      user_rating: 'Rating:'
 
 

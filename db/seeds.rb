@@ -21,5 +21,5 @@ puts 'CREATED ADMIN USER: ' << user.email
 end
 
 3.times do
-  Review.create(text: Faker::Lorem.words(30), grade: rand(1..6), place_id: 1, user_id: 1)
+  Review.create(text: Faker::Lorem.sentence(10), grade: rand(1..6), place_id: 1, user_id: 1)
 end
