@@ -22,10 +22,11 @@
 en:
   navbar:
     places: Places
-    new: New
+    new: New Place
   places:
     list: 'List of places'
-    average_rating: 'Average rating:'
+    average_rating: 'Average rating: '
+    price: 'Average price: '
   shared:
     created: "%{resource} has been created!"
     updated: "%{resource} has been updated!"
