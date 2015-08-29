@@ -16,7 +16,10 @@ puts 'CREATED ADMIN USER: ' << user.email
     country: Faker::Address.country,
     avg_price: '5.0',
     description: 'Restaurant'
+
   )
 end
 
-
+3.times do
+  Review.create(text: Faker::Lorem.words(30), grade: rand(1..6), place_id: 1, user_id: 1)
+end
