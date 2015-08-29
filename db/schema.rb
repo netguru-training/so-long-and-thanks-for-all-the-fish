@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150829132438) do
+ActiveRecord::Schema.define(version: 20150829134258) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,17 @@ ActiveRecord::Schema.define(version: 20150829132438) do
   end
 
   add_index "events", ["place_id"], name: "index_events_on_place_id", using: :btree
+
+  create_table "messages", force: :cascade do |t|
+    t.text     "content",    null: false
+    t.integer  "event_id",   null: false
+    t.integer  "user_id",    null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "messages", ["event_id"], name: "index_messages_on_event_id", using: :btree
+  add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
 
   create_table "participations", force: :cascade do |t|
     t.integer  "event_id",   null: false
@@ -81,6 +92,8 @@ ActiveRecord::Schema.define(version: 20150829132438) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "events", "places"
+  add_foreign_key "messages", "events"
+  add_foreign_key "messages", "users"
   add_foreign_key "participations", "events"
   add_foreign_key "participations", "places"
   add_foreign_key "reviews", "places"
