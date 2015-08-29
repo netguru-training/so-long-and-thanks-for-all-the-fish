@@ -8,6 +8,9 @@
         %span.icon-bar
         %span.icon-bar
       = link_to 'Home', root_path, class: 'navbar-brand'
+      %ul.nav.navbar-nav
+        %li
+          = link_to t('navbar.places'), places_path
     .collapse.navbar-collapse
       %ul.nav.navbar-nav.navbar-right
         = render 'layouts/navigation_links'
