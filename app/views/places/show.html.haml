@@ -1,5 +1,5 @@
 %div.container
   = render place
-  %h3= 'Reviews:'
-  - place.reviews.each do |review|
-    = review.grade
+  %h3= t('reviews.headers.add_new')
+  %h3= t('reviews.headers.list')
+

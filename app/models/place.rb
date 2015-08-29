@@ -5,4 +5,5 @@ class Place < ActiveRecord::Base
 
   # Relationships
   has_many :reviews
+  has_many :events
 end
