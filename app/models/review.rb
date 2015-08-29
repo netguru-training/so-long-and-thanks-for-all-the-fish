@@ -7,4 +7,8 @@ class Review < ActiveRecord::Base
   validates :text, :grade, presence: true
   validates :text, length: { minumum: 30, maximum: 3000 }
   validates :grade, numericality: { only_integer: true }, inclusion: in Review::GRADE_MIN..Review::GRADE_MAX
+
+  # Relationships
+  belongs_to :place
+  belongs_to :user
 end
