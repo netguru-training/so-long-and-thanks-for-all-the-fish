@@ -22,8 +22,10 @@
 en:
   navbar:
     places: Places
+    new: New
   places:
     list: 'List of places'
     average_rating: 'Average rating:'
   shared:
     add_new_item: 'Add new one'
+

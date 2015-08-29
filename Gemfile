@@ -15,6 +15,8 @@ gem 'decent_exposure'
 gem 'country_select'
 gem 'draper'
 gem 'decent_decoration'
+gem 'gretel'
+
 
 group :development do
   gem 'better_errors'
