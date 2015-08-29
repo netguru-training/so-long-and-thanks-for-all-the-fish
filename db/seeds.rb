@@ -7,3 +7,16 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
+
+3.times do
+  Place.create!(
+    name: Faker::Company.name,
+    street: Faker::Address.street_name,
+    city: Faker::Address.city,
+    country: Faker::Address.country,
+    avg_price: '5.0',
+    type: 'Restauracja',
+  )
+end
+
+
