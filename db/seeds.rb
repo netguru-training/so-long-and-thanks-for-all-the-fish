@@ -15,7 +15,7 @@ puts 'CREATED ADMIN USER: ' << user.email
     city: Faker::Address.city,
     country: Faker::Address.country,
     avg_price: '5.0',
-    type: 'Restauracja',
+    description: 'Restaurant'
   )
 end
 
