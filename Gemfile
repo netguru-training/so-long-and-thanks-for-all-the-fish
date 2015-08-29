@@ -12,6 +12,7 @@ gem 'haml-rails'
 gem 'pg'
 gem 'simple_form'
 gem 'decent_exposure'
+gem 'country_select'
 
 group :development do
   gem 'better_errors'
