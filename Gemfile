@@ -13,6 +13,8 @@ gem 'pg'
 gem 'simple_form'
 gem 'decent_exposure'
 gem 'country_select'
+gem 'draper'
+gem 'decent_decoration'
 
 group :development do
   gem 'better_errors'

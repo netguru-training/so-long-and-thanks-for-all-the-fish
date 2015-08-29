@@ -1,0 +1,8 @@
+%div.row
+  %div.col-md-4
+    = image_tag 'http://blog.klubseniora.pl/wp-content/themes/klubseniora/img/no_image_available.png'
+  %div.col-md-8
+    = link_to place.name, place_path(place.id)
+    %p= place.decorate.full_address
+    %p= "#{t('places.average_rating')}"
+%hr

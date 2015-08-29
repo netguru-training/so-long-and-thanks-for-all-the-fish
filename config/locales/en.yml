@@ -22,4 +22,8 @@
 en:
   navbar:
     places: Places
-    
+  places:
+    list: 'List of places'
+    average_rating: 'Average rating:'
+  shared:
+    add_new_item: 'Add new one'
