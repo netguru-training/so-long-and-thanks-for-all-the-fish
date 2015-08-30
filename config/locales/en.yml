@@ -36,8 +36,11 @@ en:
     headers:
       add_new: 'Add new review:'
       list: 'Reviews:'
+      edit: 'You are editing review to: '
     review:
       user_rating: 'Rating:'
+      delete: 'Delete'
+      edit: 'Edit'
 
 
 

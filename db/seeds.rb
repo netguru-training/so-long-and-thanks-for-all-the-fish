@@ -8,6 +8,8 @@
 user = CreateAdminService.new.call
 puts 'CREATED ADMIN USER: ' << user.email
 
+User.create!(email: 'admin@admin.com', password: 'adminadmin')
+
 3.times do
   Place.create!(
     name: Faker::Company.name,

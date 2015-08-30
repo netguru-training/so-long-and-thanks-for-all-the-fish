@@ -1,4 +1,5 @@
-= simple_form_for Review.new do |f|
+= simple_form_for([place, Review.new]) do |f|
+  = f.input :place_id, as: :hidden, input_html: { value: place.id }
   = f.input :text
-  = f.input :grade, collection: Review::GRADE_MIN..REVIEW::GRADE_MAX
+  = f.input :grade, collection: Review::GRADE_MIN..Review::GRADE_MAX
   = f.button :submit

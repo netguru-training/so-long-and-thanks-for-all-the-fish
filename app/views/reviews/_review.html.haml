@@ -4,5 +4,8 @@
   %p
     = t('reviews.review.user_rating')
     = review.grade
+  - if is_current_user_item?(review)
+    = link_to t('reviews.review.delete'), place_review_path(place, review), method: :delete
+    = link_to t('reviews.review.edit'), edit_place_review_path(place, review)
 %hr
 

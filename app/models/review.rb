@@ -1,7 +1,7 @@
 class Review < ActiveRecord::Base
   # Constans
   GRADE_MIN = 1
-  GRADE_MAX = 2
+  GRADE_MAX = 6
 
   # Validations
   validates :text, :grade, presence: true
