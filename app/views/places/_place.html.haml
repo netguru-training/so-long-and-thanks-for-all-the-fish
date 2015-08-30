@@ -1,6 +1,6 @@
 %div.row
   %div.col-md-4
-    = image_tag 'http://blog.klubseniora.pl/wp-content/themes/klubseniora/img/no_image_available.png'
+    = image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{place.latitude}%2C#{place.longitude}"
   %div.col-md-8
     = link_to place.name, place_path(place.id)
     %p= place.decorate.full_address

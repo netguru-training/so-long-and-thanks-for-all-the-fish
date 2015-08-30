@@ -16,7 +16,7 @@ gem 'country_select'
 gem 'draper'
 gem 'decent_decoration'
 gem 'gretel'
-
+gem 'geocoder'
 
 group :development do
   gem 'better_errors'
