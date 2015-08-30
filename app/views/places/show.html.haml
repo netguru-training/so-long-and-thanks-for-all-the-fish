@@ -6,9 +6,10 @@
   %button.btn.btn-default
     = "Delete"
 %hr
-%h3= t('reviews.headers.add_new')
-= render 'reviews/create', place_id: place.id
-%hr
+- if user_signed_in? && user_can_add_review?(place)
+  %h3= t('reviews.headers.add_new')
+  = render 'reviews/create', place_id: place.id
+  %hr
 %h3= t('reviews.headers.list')
 = render partial: 'reviews/review', collection: place.reviews
 
