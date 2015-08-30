@@ -6,6 +6,7 @@
   = link_to event_path(event), { method: :delete, title: t('shared.delete') } do
     %button.btn.btn-default
       = "Delete"
+  %hr
   %h3= t('events.headers.participants')
   %ul
     - event.users.each do |user|

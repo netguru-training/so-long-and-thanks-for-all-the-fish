@@ -57,6 +57,10 @@ en:
   events:
     headers:
       participants: 'List of participants:'
+    event:
+      place: 'Place:'
+      title: 'Title:'
+      start_time: 'Start time:'
 
 
 
