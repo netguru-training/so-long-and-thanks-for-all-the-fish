@@ -24,6 +24,9 @@ en:
     places: Places
     places_list: List
     new_place: New Place
+    events: Events
+    events_list: List
+    new_event: New Event
   places:
     list: 'List of places'
     average_rating: 'Average rating: '

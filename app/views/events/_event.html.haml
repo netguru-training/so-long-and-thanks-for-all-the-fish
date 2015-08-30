@@ -1,0 +1,11 @@
+%div.row
+  %div.col-md-4
+    = image_tag 'http://blog.klubseniora.pl/wp-content/themes/klubseniora/img/no_image_available.png'
+  %div.col-md-8
+  %p
+    = link_to event.title, event_path(event.id)
+  %p
+    = event.place.name
+  %p
+    = event.decorate.format_date
+%hr

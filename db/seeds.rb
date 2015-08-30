@@ -22,6 +22,15 @@ User.create!(email: 'admin@admin.com', password: 'adminadmin')
   )
 end
 
-3.times do
-  Review.create(text: Faker::Lorem.sentence(10), grade: rand(1..6), place_id: 1, user_id: 1)
+1.times do
+  Review.create!(text: Faker::Lorem.sentence(10), grade: rand(1..6), place_id: 1, user_id: 1)
+end
+
+5.times do
+  Event.create!(
+    title: Faker::Company.name,
+    description: Faker::Lorem.sentence(10),
+    date: Faker::Date.between(2.days.ago, Date.today),
+    place_id: rand(1..3)
+  )
 end

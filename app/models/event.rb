@@ -1,6 +1,6 @@
 class Event < ActiveRecord::Base
   # Validations
-  validates :title, :descritpion, :time, presence: true
+  validates :title, :description, :date, presence: true
 
   # Relationships
   belongs_to :place
