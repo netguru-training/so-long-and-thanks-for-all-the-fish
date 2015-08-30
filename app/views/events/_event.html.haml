@@ -3,9 +3,12 @@
     = link_to image_tag(event.decorate.cover), event_path(event.id)
   %div.col-md-8
   %p
+    %span.text-muted= t('events.event.title')
     = link_to event.title, event_path(event.id)
   %p
+    %span.text-muted= t('events.event.place')
     = link_to event.place.name, place_path(event.place_id)
   %p
+    %span.text-muted= t('events.event.start_time')
     = event.decorate.format_date
 %hr

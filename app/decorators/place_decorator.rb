@@ -9,4 +9,8 @@ class PlaceDecorator < Draper::Decorator
     avg = object.reviews.average(:grade)
   	avg.nil? ? 0 : avg
   end
+  
+  def google_map
+    "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{place.latitude}%2C#{place.longitude}"
+  end
 end

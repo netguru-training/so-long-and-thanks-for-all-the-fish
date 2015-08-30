@@ -1,7 +1,7 @@
 class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
-  expose(:place, attributes: :place_params)
-  expose(:places)
+  expose_decorated(:place, attributes: :place_params)
+  expose_decorated(:places)
   expose(:review)
 
   def create
