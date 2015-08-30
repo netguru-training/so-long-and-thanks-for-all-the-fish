@@ -9,5 +9,7 @@ class ReviewDecorator < Draper::Decorator
   #       object.created_at.strftime("%a %m/%d/%y")
   #     end
   #   end
-
+  def edit_header
+    "#{I18n.t('reviews.headers.edit')} #{object.place.name}"
+  end
 end

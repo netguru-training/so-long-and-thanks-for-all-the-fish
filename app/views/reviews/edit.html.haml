@@ -1,2 +1,3 @@
+%h3= review.decorate.edit_header
 = simple_form_for([place, review]) do |f|
   = render partial: 'reviews/form', locals: { f: f }
