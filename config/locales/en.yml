@@ -44,6 +44,11 @@ en:
       user_rating: 'Rating:'
       delete: 'Delete'
       edit: 'Edit'
+  messages:
+    reviews:
+      add: 'Review has been added'
+      delete: 'Review has been deleted'
+      edit: 'Review has been edited'
 
 
 

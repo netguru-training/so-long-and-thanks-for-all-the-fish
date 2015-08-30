@@ -1,2 +1,2 @@
-= simple_form_for([place, review]) do |f|
+= simple_form_for([place, Review.new]) do |f|
   = render partial: 'reviews/form', locals: { f: f }

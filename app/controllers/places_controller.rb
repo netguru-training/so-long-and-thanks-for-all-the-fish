@@ -2,6 +2,7 @@ class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
   expose(:place, attributes: :place_params)
   expose(:places)
+  expose(:review)
 
   def create
     if place.save
@@ -10,7 +11,7 @@ class PlacesController < ApplicationController
       render :new
     end
   end
-  
+
   def update
     if place.save
       redirect_to place_path(place), notice: I18n.t('shared.updated', resource: 'Place')
@@ -18,14 +19,14 @@ class PlacesController < ApplicationController
       render :edit
     end
   end
-  
+
   def destroy
     place.destroy
     redirect_to place_path, notice: I18n.t('shared.deleted', resource: 'Place')
   end
-  
+
   private
-  
+
     def place_params
       params.require(:place).permit(:name, :street, :city, :country, :description, :avg_price)
     end
