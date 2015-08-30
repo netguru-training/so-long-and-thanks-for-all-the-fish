@@ -1,3 +1,9 @@
 %div.container
   = render event
+  = link_to edit_event_path(event), { title: t('shared.edit') } do
+    %button.btn.btn-default
+      = "Edit"
+  = link_to event_path(event), { method: :delete, title: t('shared.delete') } do
+    %button.btn.btn-default
+      = "Delete"
   %h3= t('events.headers.participants')
