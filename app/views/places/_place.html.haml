@@ -1,7 +1,7 @@
 - place = place.decorate
 %div.row
   %div.col-md-4
-    = link_to image_tag("http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{place.latitude}%2C#{place.longitude}"), place_path(place.id)
+    = link_to image_tag(place.decorate.google_map), place_path(place.id)
   %div.col-md-8
     %p.text-bold
       = link_to place.name, place_path(place.id)
