@@ -4,6 +4,6 @@ class Place < ActiveRecord::Base
   validates :avg_price, numericality: true
 
   # Relationships
-  has_many :reviews, -> { includes :user }
-  has_many :events
+  has_many :reviews, -> { includes :user }, dependent: :destroy
+  has_many :events, dependent: :destroy
 end

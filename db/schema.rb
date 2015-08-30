@@ -96,6 +96,4 @@ ActiveRecord::Schema.define(version: 20150829134258) do
   add_foreign_key "messages", "users"
   add_foreign_key "participations", "events"
   add_foreign_key "participations", "places"
-  add_foreign_key "reviews", "places"
-  add_foreign_key "reviews", "users"
 end

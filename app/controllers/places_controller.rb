@@ -21,8 +21,11 @@ class PlacesController < ApplicationController
   end
 
   def destroy
-    place.destroy
-    redirect_to place_path, notice: I18n.t('shared.deleted', resource: 'Place')
+    if place.destroy
+      redirect_to places_path, notice: I18n.t('shared.deleted', resource: 'Place')
+    else
+      render place_path(place)
+    end
   end
 
   private
