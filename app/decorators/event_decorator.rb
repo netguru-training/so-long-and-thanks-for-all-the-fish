@@ -9,6 +9,10 @@ class EventDecorator < Draper::Decorator
   #       object.created_at.strftime("%a %m/%d/%y")
   #     end
   #   end
+  def cover
+  'http://lorempixel.com/400/300/' + %W(abstract nightlife transport).sample + '?a=' + SecureRandom.uuid
+  end
+  
   def format_date
     l(object.date, format: '%d.%m.%Y %H:%M')
   end
