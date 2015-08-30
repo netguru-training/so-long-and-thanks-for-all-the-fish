@@ -1,0 +1,12 @@
+= simple_form_for event do |f|
+  = f.input :title
+  = f.input :description
+  %div.form-inline
+    = f.input :date 
+  %br
+  = f.input :place_id do
+    = f.select :place_id, Place.all.map { |place| [ place.name, place.id ] }
+
+
+  = f.button :submit
+  
