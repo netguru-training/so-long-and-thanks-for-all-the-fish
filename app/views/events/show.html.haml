@@ -1,12 +1,13 @@
 %div.container
   = render event
-  = link_to edit_event_path(event), { title: t('shared.edit') } do
-    %button.btn.btn-default
-      = "Edit"
-  = link_to event_path(event), { method: :delete, title: t('shared.delete') } do
-    %button.btn.btn-default
-      = "Delete"
-  %hr
+  - if user_signed_in?
+    = link_to edit_event_path(event), { title: t('shared.edit') } do
+      %button.btn.btn-default
+        = "Edit"
+    = link_to event_path(event), { method: :delete, title: t('shared.delete') } do
+      %button.btn.btn-default
+        = "Delete"
+    %hr
   %h3= t('events.headers.participants')
   %ul
     - event.users.each do |user|

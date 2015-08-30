@@ -1,11 +1,12 @@
 = render place
-= link_to edit_place_path(place), { title: t('shared.edit') } do
-  %button.btn.btn-default
-    = "Edit"
-= link_to place_path(place), { method: :delete, title: t('shared.delete') } do
-  %button.btn.btn-default
-    = "Delete"
-%hr
+- if user_signed_in?
+  = link_to edit_place_path(place), { title: t('shared.edit') } do
+    %button.btn.btn-default
+      = "Edit"
+  = link_to place_path(place), { method: :delete, title: t('shared.delete') } do
+    %button.btn.btn-default
+      = "Delete"
+  %hr
 - if user_signed_in? && user_can_add_review?(place)
   %h3= t('reviews.headers.add_new')
   = render 'reviews/create', place_id: place.id
