@@ -31,6 +31,9 @@ en:
     created: "%{resource} has been created!"
     updated: "%{resource} has been updated!"
     deleted: "%{resource} has been deleted!"
+    edit: edit
+    show: show
+    delete: delete
     add_new_item: 'Add new one'
   reviews:
     headers:

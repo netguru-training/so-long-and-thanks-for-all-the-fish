@@ -1,5 +1,11 @@
 %div.container
   = render place
+  = link_to edit_place_path(place), { title: t('shared.edit') } do
+    %button.btn.btn-default
+      = "Edit"
+  = link_to place_path(place), { method: :delete, title: t('shared.delete') } do
+    %button.btn.btn-default
+      = "Delete"
   %h3= t('reviews.headers.add_new')
   = render 'reviews/form', place_id: place.id
   %h3= t('reviews.headers.list')
