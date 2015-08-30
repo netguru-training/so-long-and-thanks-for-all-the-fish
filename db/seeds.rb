@@ -57,12 +57,13 @@ for i in 1..5 do
 end
 
 5.times do
-  Event.create!(
+  ev = Event.create!(
     title: Faker::Company.name,
     description: Faker::Lorem.sentence(10),
     date: Faker::Date.between(2.days.ago, Date.today),
     place_id: rand(1..5)
   )
+  ev.users << user
 end
 
 

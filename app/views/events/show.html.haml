@@ -7,3 +7,7 @@
     %button.btn.btn-default
       = "Delete"
   %h3= t('events.headers.participants')
+  %ul
+    - event.users.each do |user|
+      %li
+        = user.email

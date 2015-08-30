@@ -1,13 +1,14 @@
-%div.container
-  = render place
-  = link_to edit_place_path(place), { title: t('shared.edit') } do
-    %button.btn.btn-default
-      = "Edit"
-  = link_to place_path(place), { method: :delete, title: t('shared.delete') } do
-    %button.btn.btn-default
-      = "Delete"
-  %h3= t('reviews.headers.add_new')
-  = render 'reviews/create', place_id: place.id
-  %h3= t('reviews.headers.list')
-  = render partial: 'reviews/review', collection: place.reviews
+= render place
+= link_to edit_place_path(place), { title: t('shared.edit') } do
+  %button.btn.btn-default
+    = "Edit"
+= link_to place_path(place), { method: :delete, title: t('shared.delete') } do
+  %button.btn.btn-default
+    = "Delete"
+%hr
+%h3= t('reviews.headers.add_new')
+= render 'reviews/create', place_id: place.id
+%hr
+%h3= t('reviews.headers.list')
+= render partial: 'reviews/review', collection: place.reviews
 
