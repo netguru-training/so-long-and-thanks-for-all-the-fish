@@ -1,0 +1,13 @@
+before_script:
+- psql -c 'create database travis_ci_test;' -U postgres
+- cp config/database.sample.yml config/database.yml
+language: ruby
+rvm:
+- 2.2.2
+deploy:
+  provider: heroku
+  api_key:
+    secure: h6iKw5JVUlH1vPWspuN8AxTtZmZFGni0oycxF02rhwN+z6mon/ixcM7s7Ubma6OBPW6MKK1t5JkaHOkAmWh/2G57mfeS2twF/YIT3u0/ZEGSnENLFGhhB+Vym/aDRLN2JSrXCF9/q1+/WAngI00ld/YlseRwGSo28tZCnls+yKOodd8v1Wc1AaKjaQCYiFhkyrfHI+X77m+8VX9nWiVp9pa+4KXd7Tf7brCSkc8rc+A8NlKujS2EQs8NnsZuvXKlEP1bcfDECN4y+MdPGg6EvVPokMhH5of2p31MvcvFRw/Wk2j0xM4ZDOyGDEuToMc6p7cce0YPbp0t+mflP9gy8QwhiTL2oVfwu7ftPOvyfNEmFVU9lAHxJb1KdqdCoIGuXGyNTHdmDY9POomXoNk6mFT5mYHri5+vz5osasjez+ldafp3xjG9Y12FL/NOJKwf7z8nNDKwDjKRuCdVuSKxEmV5btVdCq0nJ39Ah/mrjbG8AYEGrwiz5KLGSRcqdMLbEWlNw0cr8Fqb89CoXxchJ2Gvz+9WqTQQxU7xpWuaGNtf9rLb1L1gQBuqpE2rDMwPQN4kdrM4+S9dfYbDZn63vdaBEL2rc55k/b13Xt0y2f+a+SImOyl+bBnY3by20FRKn9ENNeFNQJl+Pd7VsoP3p3AYvbsLNKD5h/0No/27vWQ=
+  app: cryptic-stream-5771
+  on:
+    repo: netguru-training/so-long-and-thanks-for-all-the-fish
