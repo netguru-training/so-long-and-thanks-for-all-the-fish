@@ -53,6 +53,9 @@ en:
       add: 'Review has been added'
       delete: 'Review has been deleted'
       edit: 'Review has been edited'
+  events:
+    headers:
+      participants: 'List of participants:'
 
 
 
