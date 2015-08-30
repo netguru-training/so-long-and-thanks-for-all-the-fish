@@ -1,6 +1,7 @@
 before_script:
 - psql -c 'create database travis_ci_test;' -U postgres
 - cp config/database.sample.yml config/database.yml
+- rake db:setup
 language: ruby
 rvm:
 - 2.2.0
