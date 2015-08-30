@@ -17,6 +17,7 @@ gem 'draper'
 gem 'decent_decoration'
 gem 'gretel'
 gem 'geocoder'
+gem 'faker'
 
 group :development do
   gem 'better_errors'
@@ -27,7 +28,6 @@ group :development do
 end
 
 group :development, :test do
-  gem 'faker'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rubocop'
