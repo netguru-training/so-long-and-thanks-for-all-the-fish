@@ -10,43 +10,36 @@ provided by the [RailsApps Project](http://railsapps.github.io/).
 
 Rails Composer is open source and supported by subscribers. Please join RailsApps to support development of Rails Composer.
 
-Problems? Issues?
------------
-
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
-
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
-
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
-
-Ruby on Rails
--------------
-
-This application requires:
-
-- Ruby 2.2.0
-- Rails 4.2.0
-
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
-
-Getting Started
+App description
 ---------------
+Do you need website where you can share your favorite places with other users? So you are in right place! Add new interesting place (pub, restaurant etc.) or explore others. Don't forget to leave your review about place where you have been. Create a event in choosen place, wait for your friends and talk about event's details.
 
-Documentation and Support
+Features:
 -------------------------
 
-Issues
--------------
+Authorization and authentication:
+  - Visitor can sign up and sign up to website usign his email
+  - User can edit his data
+  - User can delete his account
 
-Similar Projects
-----------------
+Places:
+  - User can view places entries 
+  - User can go to choosen place
+  - User can add new place (when signed in)
+  - User can edit/delete place (when signed in and when entry belogns to him)
 
-Contributing
-------------
+Reviews:
+  - User can post ONE review with the grade to choosen place (when signed in)
+  - User can edit/delete his own review (when signed in)
 
-Credits
--------
+Events:
+  - User can view events entries
+  - User can create event corresponding to existing places (when signed in)
+  - User can edit/delete event (when signed in and when entry belogns to him)
+  - User can participate to event (when signed in) [not implemented yet]
+  - User can share messages to event which he joined (when signed in) [not implemented yet]
 
-License
--------
+Check the app on Heroku!
+-------------------------
+https://cryptic-stream-5771.herokuapp.com/
+
